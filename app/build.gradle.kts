@@ -76,8 +76,11 @@ dependencies {
     ksp(libs.hilt.compiler)
 
     // Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.gson)
 
-    // Coil
-
-    // Gson
+    // Moshi
+    implementation(libs.moshi)
+    implementation(libs.moshi.kotlin)
+    ksp(libs.moshi.kotlin.codegen)
 }

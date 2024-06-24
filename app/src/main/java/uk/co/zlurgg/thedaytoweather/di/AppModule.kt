@@ -1,11 +1,8 @@
 package uk.co.zlurgg.thedaytoweather.di
 
 import dagger.Module
-import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import uk.co.zlurgg.thedaytoweather.data.data_source.WeatherApiService
-import uk.co.zlurgg.thedaytoweather.data.repository.WeatherRepository
 
 @Module
 @InstallIn(SingletonComponent::class)
