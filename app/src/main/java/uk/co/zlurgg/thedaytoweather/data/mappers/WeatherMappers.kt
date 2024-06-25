@@ -2,9 +2,9 @@ package uk.co.zlurgg.thedaytoweather.data.mappers
 
 import uk.co.zlurgg.thedaytoweather.data.remote.WeatherDataDto
 import uk.co.zlurgg.thedaytoweather.data.remote.WeatherDto
-import uk.co.zlurgg.thedaytoweather.domain.model.WeatherData
-import uk.co.zlurgg.thedaytoweather.domain.model.WeatherInfo
-import uk.co.zlurgg.thedaytoweather.domain.model.WeatherType
+import uk.co.zlurgg.thedaytoweather.domain.weather.model.WeatherData
+import uk.co.zlurgg.thedaytoweather.domain.weather.model.WeatherInfo
+import uk.co.zlurgg.thedaytoweather.domain.weather.model.WeatherType
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
@@ -34,7 +34,7 @@ fun WeatherDataDto.toWeatherDataMap(): Map<Int, List<WeatherData>> {
         )
     }.groupBy {
         it.index / 24
-    }.mapValues {
+    }.mapValues { it ->
         it.value.map { it.data }
     }
 }

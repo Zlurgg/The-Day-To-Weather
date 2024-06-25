@@ -1,6 +1,6 @@
-package uk.co.zlurgg.thedaytoweather.domain.repository
+package uk.co.zlurgg.thedaytoweather.domain.weather.repository
 
-import uk.co.zlurgg.thedaytoweather.domain.model.WeatherInfo
+import uk.co.zlurgg.thedaytoweather.domain.weather.model.WeatherInfo
 import uk.co.zlurgg.thedaytoweather.domain.util.Resource
 
 interface WeatherRepository {

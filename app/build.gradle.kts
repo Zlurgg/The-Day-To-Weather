@@ -83,4 +83,8 @@ dependencies {
     implementation(libs.moshi)
     implementation(libs.moshi.kotlin)
     ksp(libs.moshi.kotlin.codegen)
+
+    // Fused Location Provider
+    implementation(libs.play.services.location)
+
 }
