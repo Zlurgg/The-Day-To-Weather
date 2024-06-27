@@ -1,4 +1,4 @@
-package uk.co.zlurgg.thedaytoweather.domain.weather.model
+package uk.co.zlurgg.thedaytoweather.domain.weather
 
 data class WeatherInfo(
     val weatherDataPerDay: Map<Int, List<WeatherData>>,

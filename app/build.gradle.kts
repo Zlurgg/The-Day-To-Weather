@@ -75,13 +75,16 @@ dependencies {
     ksp(libs.dagger.compiler)
     ksp(libs.hilt.compiler)
 
+    implementation(libs.androidx.hilt.navigation.compose)
+    implementation(libs.androidx.navigation.compose)
+
     // Retrofit
     implementation(libs.retrofit)
-    implementation(libs.retrofit.gson)
 
     // Moshi
     implementation(libs.moshi)
     implementation(libs.moshi.kotlin)
+    implementation(libs.retrofit.moshi)
     ksp(libs.moshi.kotlin.codegen)
 
     // Fused Location Provider

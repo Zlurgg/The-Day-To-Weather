@@ -8,7 +8,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.create
 import uk.co.zlurgg.thedaytoweather.data.remote.WeatherApiService
 import javax.inject.Singleton
@@ -19,19 +19,17 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideWeatherApiService(): WeatherApiService {
+    fun provideWeatherApi(): WeatherApiService {
         return Retrofit.Builder()
             .baseUrl("https://api.open-meteo.com/")
-            .addConverterFactory(GsonConverterFactory.create())
+            .addConverterFactory(MoshiConverterFactory.create())
             .build()
             .create()
     }
 
     @Provides
     @Singleton
-    fun providesFuseLocationProviderClient(app: Application): FusedLocationProviderClient {
+    fun provideFusedLocationProviderClient(app: Application): FusedLocationProviderClient {
         return LocationServices.getFusedLocationProviderClient(app)
     }
-
-
 }

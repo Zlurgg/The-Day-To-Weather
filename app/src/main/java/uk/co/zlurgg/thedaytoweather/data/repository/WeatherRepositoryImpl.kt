@@ -1,9 +1,10 @@
 package uk.co.zlurgg.thedaytoweather.data.repository
 
+import android.util.Log
 import uk.co.zlurgg.thedaytoweather.data.mappers.toWeatherInfo
 import uk.co.zlurgg.thedaytoweather.data.remote.WeatherApiService
-import uk.co.zlurgg.thedaytoweather.domain.weather.model.WeatherInfo
-import uk.co.zlurgg.thedaytoweather.domain.weather.repository.WeatherRepository
+import uk.co.zlurgg.thedaytoweather.domain.weather.WeatherInfo
+import uk.co.zlurgg.thedaytoweather.domain.repository.WeatherRepository
 import uk.co.zlurgg.thedaytoweather.domain.util.Resource
 import javax.inject.Inject
 

@@ -2,9 +2,9 @@ package uk.co.zlurgg.thedaytoweather.data.mappers
 
 import uk.co.zlurgg.thedaytoweather.data.remote.WeatherDataDto
 import uk.co.zlurgg.thedaytoweather.data.remote.WeatherDto
-import uk.co.zlurgg.thedaytoweather.domain.weather.model.WeatherData
-import uk.co.zlurgg.thedaytoweather.domain.weather.model.WeatherInfo
-import uk.co.zlurgg.thedaytoweather.domain.weather.model.WeatherType
+import uk.co.zlurgg.thedaytoweather.domain.weather.WeatherData
+import uk.co.zlurgg.thedaytoweather.domain.weather.WeatherInfo
+import uk.co.zlurgg.thedaytoweather.domain.weather.WeatherType
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
@@ -12,7 +12,6 @@ private data class IndexedWeatherData(
     val index: Int,
     val data: WeatherData
 )
-
 
 fun WeatherDataDto.toWeatherDataMap(): Map<Int, List<WeatherData>> {
     return time.mapIndexed { index, time ->
@@ -34,7 +33,7 @@ fun WeatherDataDto.toWeatherDataMap(): Map<Int, List<WeatherData>> {
         )
     }.groupBy {
         it.index / 24
-    }.mapValues { it ->
+    }.mapValues {
         it.value.map { it.data }
     }
 }

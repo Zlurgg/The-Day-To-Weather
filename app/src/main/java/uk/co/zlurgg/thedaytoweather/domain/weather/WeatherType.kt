@@ -1,4 +1,4 @@
-package uk.co.zlurgg.thedaytoweather.domain.weather.model
+package uk.co.zlurgg.thedaytoweather.domain.weather
 
 import androidx.annotation.DrawableRes
 import uk.co.zlurgg.thedaytoweather.R
